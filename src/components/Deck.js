@@ -21,7 +21,7 @@ const Splash = (props) => {
 };
 
 export default class Deck extends React.Component {
-	render() {
+  render() {
     const { game, onReset, onAddDisc } = this.props;
 
     let grid = game.grid.map((row, y) => {

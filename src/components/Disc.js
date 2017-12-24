@@ -6,7 +6,7 @@ export default class Disc extends React.Component {
     this.props.onAddDisc(this.props.pos);
   }
 
-	render() {
+  render() {
     const { player } = this.props;
 
     let discClasses = classNames({

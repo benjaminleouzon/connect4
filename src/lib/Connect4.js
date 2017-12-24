@@ -13,13 +13,13 @@ const __players = ['yellow', 'red'];
  * @return {Array}
  */
 function retrieveColumn(grid, col) {
-	let column = [];
+  let column = [];
 
-	for (let row in grid) {
-		column.push(grid[row][col]);
-	}
+  for (let row in grid) {
+    column.push(grid[row][col]);
+  }
 
-	return column;
+  return column;
 }
 
 /**
@@ -73,12 +73,12 @@ function matchConnect(grid, pos, disc, direction) {
  * Connect4 class
  */
 export default class Connect4 {
-	constructor() {
-		/**
-		 * Grid
-		 * @type {Array}
-		 */
-		this.grid = [
+  constructor() {
+    /**
+     * Grid
+     * @type {Array}
+     */
+    this.grid = [
       [0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0],
@@ -88,16 +88,16 @@ export default class Connect4 {
     ];
 
     this.nbCells = _.flatten(this.grid).length;
-		/**
-		 * Number of discs on the grid
-		 * @type {Number}
-		 */
-		this.nbDiscs = 0;
-		/**
-		 * Current player
-		 * @type {String}
-		 */
-		this.currentPlayer = 'yellow';
+    /**
+     * Number of discs on the grid
+     * @type {Number}
+     */
+    this.nbDiscs = 0;
+    /**
+     * Current player
+     * @type {String}
+     */
+    this.currentPlayer = 'yellow';
     /**
      * Gameover
      * @type {Boolean}
@@ -108,12 +108,12 @@ export default class Connect4 {
      * @type {String}
      */
     this.winner = null;
-	}
-	/**
-	 * Add a disc on the grid
-	 * @param {Object} pos
-	 */
-	addDisc(pos) {
+  }
+  /**
+   * Add a disc on the grid
+   * @param {Object} pos
+   */
+  addDisc(pos) {
       // retrieve the column
       let column = retrieveColumn(this.grid, pos.col);
       let emptyIndex = findEmptyCellIndex(column);   
@@ -141,7 +141,7 @@ export default class Connect4 {
       if (this.nbDiscs === this.nbCells) {
         this.isOver = true;
       }
-	}
+  }
   /**
    * Check if 4 are connected
    * @param  {Object} pos

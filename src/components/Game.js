@@ -23,7 +23,7 @@ export default class Game extends React.Component {
     this.forceUpdate();
   }
 
-	render() {
+  render() {
     return (
       <React.Fragment>
         <h1>Puissance 4 - GoJob</h1>

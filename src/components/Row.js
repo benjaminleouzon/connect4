@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default class Row extends React.Component {
-	render() {
+  render() {
     return (
       <div className="connect4-row">
-      	{this.props.children}
+        {this.props.children}
       </div>
     );
   }
