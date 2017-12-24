@@ -1,0 +1,77 @@
+.connect4-grid {
+  width: 560px;
+  margin: 0 auto;
+  background: blue;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+
+  .connect4-disc {
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin: 10px;
+    vertical-align: middle;
+    color: white;
+    background: radial-gradient(circle, white 22px, transparent 23px, transparent) center/60px;
+
+    &.connect4-disc-red {
+      .discBackground(red);
+    }
+
+    &.connect4-disc-yellow {
+      .discBackground(yellow);
+    }
+  }
+
+  .connect4-grid-splash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+
+    p { 
+      display: block; 
+    }
+  }
+}
+
+.connect4-grid-control {
+  width: 560px;
+  margin: 0 auto;
+  background: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  .clearfix();
+
+  .connect4-grid-control-player {
+    height: 15px;
+    width: 15px;
+    float: left;
+    padding: 10px;
+    background: yellow;
+    border-radius: 50%
+  }
+
+  .connect4-grid-control-button {
+    float: right;
+    background: darken(blue, 10%);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
