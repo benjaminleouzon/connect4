@@ -102,7 +102,7 @@ export default class Connect4 {
      * Gameover
      * @type {Boolean}
      */
-    this.gameOver = false;
+    this.isOver = false;
     /**
      * Winner
      * @type {String}
@@ -129,7 +129,7 @@ export default class Connect4 {
 
       // check for a winner
       if (this.areFourConnected(discPos)) {
-        this.gameOver = true;
+        this.isOver = true;
         this.winner = this.currentPlayer;
         return;
       }
@@ -139,7 +139,7 @@ export default class Connect4 {
 
       // if grid full, game over
       if (this.nbDiscs === this.nbCells) {
-        this.gameOver = true;
+        this.isOver = true;
       }
 	}
   /**

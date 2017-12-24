@@ -29,7 +29,7 @@ export default class Game extends React.Component {
         <h1>Puissance 4 - GoJob</h1>
         <h3>Click on a column to start the game</h3>
         <Deck 
-          gameboard={this.state.connect4} 
+          game={this.state.connect4} 
           onAddDisc={this.addDisc.bind(this)} 
           onReset={this.startOrRestartGame.bind(this)}/>
         <Controls currentPlayer={this.state.connect4.currentPlayer} onReset={this.startOrRestartGame.bind(this)}/>

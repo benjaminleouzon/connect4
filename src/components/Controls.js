@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Controls extends React.Component {
 	render() {
-      const currentPlayer = this.props.currentPlayer;
+      const { currentPlayer } = this.props;
 
 	    return (
 	      <div className="connect4-grid-control">

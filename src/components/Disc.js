@@ -7,9 +7,11 @@ export default class Disc extends React.Component {
   }
 
 	render() {
+    const { player } = this.props;
+
     let discClasses = classNames({
       'connect4-disc': true,
-      [`connect4-disc-${this.props.player}`]: !!this.props.player
+      [`connect4-disc-${player}`]: !!player
     });
 
     return (
