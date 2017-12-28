@@ -111,18 +111,18 @@ export default class Connect4 {
   }
   /**
    * Add a disc on the grid
-   * @param {Object} pos
+   * @param {Object} pos (x, y)
    */
   addDisc(pos) {
       // retrieve the column
-      let column = retrieveColumn(this.grid, pos.col);
+      let column = retrieveColumn(this.grid, pos.y);
       let emptyIndex = findEmptyCellIndex(column);   
 
       // no cell available
       if (emptyIndex === -1) return;
 
       // determine disc position
-      let discPos = { row: emptyIndex, col: pos.col };
+      let discPos = { row: emptyIndex, col: pos.y };
 
       // affect 
       this.grid[discPos.row][discPos.col] = this.currentPlayer;

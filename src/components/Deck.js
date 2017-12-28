@@ -22,19 +22,16 @@ const Splash = (props) => {
 
 export default class Deck extends React.Component {
   render() {
-    const { game, onReset, onAddDisc } = this.props;
+    const { grid, gameOver, winner, onReset, onAddDisc } = this.props;
 
-    let grid = game.grid.map((row, y) => {
+    let deck = grid.map((row, x) => {
       return (
-        <Row key={y}>
-          {row.map((cell, x) => {
-            const pos = { 
-              row: y, 
-              col: x
-            };
+        <Row key={x}>
+          {row.map((cell, y) => {
+            const pos = { x, y };
             return (
               <Disc 
-                key={x} 
+                key={y} 
                 pos={pos} 
                 player={cell} 
                 onAddDisc={() => { this.props.onAddDisc(pos); }}/>
@@ -46,10 +43,10 @@ export default class Deck extends React.Component {
 
     return (
       <div className="connect4-grid">
-        {grid}
-        {game.isOver &&
+        {deck}
+        {gameOver &&
           <Splash  
-            winner={game.winner} 
+            winner={winner} 
             onReset={onReset}/>}
       </div>
     );
